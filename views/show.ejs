@@ -1,0 +1,13 @@
+<%- include('partials/header'); %>
+<div class="container flex">
+    <div class="content">
+        <p><%=Fact.question%></p>
+        <p><%=Fact.answer%></p>
+    </div>
+    
+    <div class="actions">
+        <a href="/fact/<%=Fact._id%>/edit" class="btn-secondary">Edit</a>
+        <button id="delete-button" data-factid="<%=Fact._id%>" class="btn-danger">Delete</button>
+    </div>
+</div>
+<%- include('partials/footer'); %>

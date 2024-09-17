@@ -1,0 +1,18 @@
+</div>
+<script id="main" src="/javascript/app.js"></script>
+<!-- 
+The script generates a unique timestamp and appends it to CSS and JavaScript URLs as a query parameter ("?t="). 
+This forces browsers to fetch fresh copies of these assets on each page load, 
+bypassing cache and ensuring they always serve the latest versions.
+-->
+<!-- This hack should only be used, locally, though. We do not want to have this behaviour in production. -->
+<script>
+    const timeStamp = Date.now()
+    const stylesheetLink = document.querySelector("link#styles")
+    const appScriptLink = document.querySelector("script#main")
+    stylesheetLink.href += `?t=${timeStamp}`
+    appScriptLink.src += `?t=${timeStamp}`
+</script>
+</body>
+
+</html>

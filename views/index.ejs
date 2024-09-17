@@ -1,0 +1,23 @@
+<%- include('partials/header'); %>
+    <div class="container">
+        <% if(!Facts.length){ %>
+            <div class="no-facts">
+                <p>No facts yet.</p>
+                <p><a href="/fact">Add now</a></p>
+            </div>
+            <% } else { %>
+                <% Facts.forEach(fact=> { %>
+                    <a href="/fact/<%=fact._id%>">
+                        <div class="fact-item">
+                            <div class="question-wrapper">
+                                <p class="question"><%=fact.question%></p>
+                                <div class="actions">
+                                    <img src="./assets/icon-arrow-right.svg" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <% }); %>
+                        <% } %>
+    </div>
+    <%- include('partials/footer'); %>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Time</title>
+    <!-- This CSS file is versioned using a query parameter (?v=version) in the <link> tag to prevent browser caching and ensure that the latest styles are always loaded. When updates are made to the stylesheet, the version number should be incremented to force the browser to fetch the new version. -->
+    <!-- <link rel="stylesheet" href="/style/main.css?v=1"> -->
+     <!-- This hack should only be used, locally, though. We do not want to have this behaviour in production. -->
+    <link id="styles" rel="stylesheet" href="/style/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="site-header">
+            <div class="site-logo">
+                <a href="/">
+                    <img src="/image/logo.png" alt="">
+                </a>
+            </div>
+            <div class="">
+                <a href="/fact" class="btn">
+                    <span>+ New Fact</span>
+                </a>
+            </div>
+        </header>
+        <h1><%=Title%></h1>
+        <h2><%=Subtitle%></h2>

@@ -1,0 +1,17 @@
+<%- include('partials/header'); %>
+<div class="container">
+    <form id="form-update-fact" data-factid="<%=Fact._id%>">
+        <label for="question">
+            <span><%=Fact.question%></span>
+            <input type="text" id="question" name="question" value="<%=Fact.question%>">
+        </label>
+
+        <label for="answer">
+            <span><%=Fact.answer%></span>
+            <input type="text" id="answer" name="answer" value="<%=Fact.answer%>">
+        </label>
+
+        <input type="submit" value="Update">
+    </form>
+</div>
+<%- include('partials/footer'); %>
